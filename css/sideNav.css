@@ -1,0 +1,12 @@
+.nav2{
+  width: 20em;
+  transition: none;
+}
+.navtext{
+  opacity: 1;
+  display: inline-block;
+}
+.main{
+  width: calc(100% - 20em);
+  left: 20em; 
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="/js/spinner.js"></script>
+  <script src="/js/settings.js"></script>
+  <script src="/js/colorpicker.js"></script>
+<script>
+      async function fetchHtml(option) {
+
+          let response = await fetch(option);
+          return await response.text(); 
+      }
+
+      async function loadGames() {
+          let html = await fetchHtml("/embed/games.html");
+          console.log(html);
+          localStorage.setItem('moregames', html);
+          const DivToHaveGamesInserted = document.getElementById("games");
+          DivToHaveGamesInserted.innerHTML = localStorage.getItem('moregames');
+      }
+
+      loadGames();
+  
+  function paramGet(name) {
+      name = name.replace(/[[]/, '\$$[').replace(/[]$$]/, '\\]');
+      var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+      var results = regex.exec(location.search);
+      return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    const iframe = document.getElementById('gameframe_frame_container');
+    const storedSrc = paramGet('game');
+    const gmsTitle = document.querySelectorAll('#gmsName');
+    gmsTitle.forEach(gmsTitle => {
+      gmsTitle.innerHTML = localStorage.getItem('Title');
+    });
+    /*if(storedSrc === "/gms/snow-rider-3d/"){
+      window.location.href="/"
+    }*/
+    iframe.src = '/loader.html?game=' + storedSrc;
+    });
+
+  function fullscreen(){
+    const frame = document.getElementById('gameframe_frame_container');
+    frame.requestFullscreen();
+    frame.contentWindow.focus();
+  }
+  function cloak() {
+    const mainGameFrame = document.getElementById('gameframe_frame_container');
+    const gameUrl = mainGameFrame.src;
+    mainGameFrame.src = `/paused.html?game=${gameUrl}`;
+    const left = (screen.width - 1366) / 2;
+    const top = (screen.height - 768) / 4;
+    const win = window.open('', '_blank', `width=1366,height=768,top=${top},left=${left}`);
+    if (window.focus) {
+      win.focus();
+    }
+    win.document.body.style.margin = '0';
+    win.document.body.style.height = '100vh';
+    win.document.title = window.location.hostname;
+    const iframe = win.document.createElement('iframe');
+    iframe.style.border = 'none';
+    iframe.style.width = '100%';
+    iframe.style.height = '100%';
+    iframe.style.margin = '0';
+    iframe.src = gameUrl;
+    win.document.body.appendChild(iframe);
+    win.addEventListener('close', () => {
+      mainGameFrame.src = iframe.src;
+    });
+  }
+
+   document.title = localStorage.getItem('Title') + ' Unblocked · Obsidian Network';
+</script>
+
+  <script src="/js/nav.js"></script>
+  <script src="/js/games.js"></script>
+  <script src="/js/style.js"></script>
+  <script>
+    function changeGame(){
+        const input = document.getElementById('gmes');
+        const optionw=input.options[input.selectedIndex].innerHTML;
+        const option=input.options[input.selectedIndex].value;
+        const display=document.getElementById('games');
+        document.title = optionw + " · Obsidian Network";
+        async function fetchHtml() {
+
+            let response = await fetch(option);
+            return await response.text(); 
+        }
+
+        async function loadGames() {
+            let html = await fetchHtml();
+            console.log(html);
+            localStorage.setItem('moregames', html);
+            const DivToHaveGamesInserted = document.getElementById("games");
+            DivToHaveGamesInserted.innerHTML = localStorage.getItem('moregames');
+        }
+
+        loadGames();
+    }
+    const it = document.getElementById('gmes');
+    it.addEventListener('click', function() {
+        if(it.style.background === "#f1f1f1") {
+            it.style.background = "#363636";
+            it.style.color = "#f1f1f1";
+        } else {
+            it.style.background = "#f1f1f1";
+            it.style.color = "#363636";
+        }
+    });
+
+
+    function getUrlParameter(name) {
+        name = name.replace(/[[]/, '\$$[').replace(/[]$$]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    };
+  </script>
+  <script>
+    async function FetchHtml() {
+         if(getUrlParameter('query')){
+           var p = getUrlParameter('query');
+         }
+      else{
+        var p = "/games.html";
+      }
+      setSelectValue('gmes', '/embed' + p);
+
+        let response = await fetch('/embed' + p);
+        return await response.text(); 
+
+    }
+
+    async function Do() {
+        let html = await FetchHtml();
+        console.log(html);
+        localStorage.setItem('moregames', html);
+        const DivToHaveGamesInserted = document.getElementById("games");
+        DivToHaveGamesInserted.innerHTML = localStorage.getItem('moregames');
+    }
+
+    Do();
+    document.addEventListener('DOMContentLoaded', function () {
+    Do();
+    });
+
+    function getUrlParameter(name) {
+        name = name.replace(/[[]/, '\$$[').replace(/[]$$]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    };
+    function setSelectValue (id, val) {
+        document.getElementById(id).value = val;
+    }
+    const input = document.getElementById('gmes');
+    const optionw=input.options[input.selectedIndex].innerHTML;
+    const option=input.options[input.selectedIndex].value;
+    const display=document.getElementById('games');
+    document.title = optionw + " · Obsidian Network";
+  </script>
+  <script src="/js/style.js"></script>
+  <link id="style" rel="stylesheet" href="">
+  <link rel="stylesheet" media="screen" href="/css/style.css">
+
+</head>
+<body>
+  <div id="spinny" style="background: #101010; position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:9999999999999; transition: opacity 1.1s ease;">
+
+
+  <style>
+
+  </style>
+          <center>
+          <div class="loading" style="text-align: center;">
+               <div class="semipolar-spinner">
+                <div class="ring"></div>
+                <div class="ring"></div>
+                <div class="ring"></div>
+                <div class="ring"></div>
+                <div class="ring"></div>
+              </div><!--<span id="dots" class="dots"></span></p>-->
+          </div>
+      </center>
+  </div>
+<div class="topnav1" id="topnav1">
+<img src="/favicon.png" class="logo"> 
+</div>
+  <a id="settings" href="/settings.html"><img src="/svg/settings.svg" class="navicon"></a>
+  <div class="nav2" id="nav2">
+    <span>
+      <a class="link-box" href="/"><img src="/svg/home.svg" class="navicon"><span class="navtext">Home</span></a>
+      <br>
+      <a class="link-box" href="/games.html"><img src="/svg/allgames.svg" class="navicon"><span class="navtext">All Games</span></a>
+      <br>
+      <a class="link-box" href="/games.html"><img src="/svg/popular.svg" class="navicon"><span class="navtext">Popular Games</span></a>
+      <br>
+      <a class="link-box" href="/games.html"><img src="/svg/sports.svg" class="navicon"><span class="navtext">Sports Games</span></a>
+      <br>      
+        <a class="link-box" href="/games.html"><img src="/svg/guns.svg" class="navicon"><span class="navtext">Shooter Games</span></a>
+        <br>
+        <a class="link-box" href="/games.html"><img src="/svg/d-pad.svg" class="navicon"><span class="navtext">Parkour Games</span></a>  <br>
+        <a class="link-box" href="/games.html"><img src="/svg/racing.svg" class="navicon"><span class="navtext">Car Games</span></a>
+
+        <br>
+        <a class="link-box" href="/games.html"><img src="/svg/horror.svg" class="navicon"><span class="navtext">Horror Games</span></a>
+        <br>
+        <a class="link-box" href="/games.html"><img src="/svg/survival.svg" class="navicon"><span class="navtext">Survival Games</span></a>
+        <br>
+        <a class="link-box" href="/games.html"><img src="/svg/clicker.svg" class="navicon"><span class="navtext">Cursor Games</span></a>
+        <br>
+    </span>
+
+  </div>
+<div id="particles-js"> </div>
+<div class="main">
+  <div id="scroll" class="scroll"></div>
+
+    <div class="frame" id="frame">
+      <iframe src="" id="gameframe_frame_container" class="game_frame"></iframe>
+        <div class="gameUIbar">
+          <h1 id="gmsName" class="gmsName"></h1>
+          <span style="float: right;" class="gamesicon" onclick="fullscreen();"><img class="gameUIbutton" src="/svg/ui/fullscreen.svg"></span>
+        <span style="float: right;" class="gamesicon" onclick="cloak();"><img class="gameUIbutton" src="/svg/ui/cloak.svg"></span>
+        </div>
+    </div><div id="advertisement" class="gamesPageAdvertisement"><center><h1>Please Disable your AdBlocker</h1></center></div>
+  <div id="games"></div>
+</div>
+  <div class="iconName">
+    <h1 class="rainbow"><a href="/">OBSIDIAN NETWORK</a></h1>
+  </div>
+
+<script src="/particles.js"></script>
+<script src="/js/app.js"></script>
+
+
+
+</body>
+</html>
