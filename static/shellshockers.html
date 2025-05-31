@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+html, body{
+text-align:center;
+align-content: center;
+height: 100%;
+  font-family: "Raleway", serif;
+  font-optical-sizing: auto;
+  font-weight: 714;
+  font-style: normal;
+background: black;}
+button{
+position: static;
+top: 50%;
+left: 50%
+height: 10em;
+width: 16em;
+font-size: 20px;
+}
+h1{
+color: white;}
+body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shell Shockers</title>
+  <script src="uv/uv.bundle.js"></script>
+<script src="uv/uv.config.js"></script>
+<script src="register-sw.js"></script>
+<script>
+      const gmsTitle = document.querySelectorAll('#gmsName');
+      gmsTitle.forEach(gmsTitle => {
+        gmsTitle.innerHTML = localStorage.getItem('Title');
+      });
+function launch(){
+const style = document.createElement('style');
+        style.innerHTML = `html::-webkit-scrollbar {display: none;}html {-ms-overflow-style: none; scrollbar-width: none; }`;
+        const iframe = document.createElement('iframe');
+        iframe.style.position = 'fixed';
+        iframe.style.top = '0';
+        iframe.style.left = '0';
+        iframe.style.bottom = '0';
+        iframe.style.right = '0';
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.border = 'none';
+        iframe.style.margin = '0';
+        iframe.style.padding = '0';
+        iframe.style.overflow = 'hidden';
+        iframe.style.zIndex = '999999';
+        iframe.src = "/loader.html?game=/static/shellshockers.embed.html";
+        iframe.style.backgroundColor = '#b7e';
+        document.body.appendChild(iframe);}
+</script>
+ </head>
+<body>
+
+<h1><span id="gmsName">Shell Shockers</span> is managed by an external provider <br>(https://crazygames.com/embed/shellshockers.io).<br> snow-rider.online is not responsible for the content shown. <br>We have no control over and are not responsible for in-game<br> content, technical issues (such as progress save), and <br>ads that may interrupt your gameplay.</h1><button onclick="launch();">Acknowledge</button>
+</body>
+</html>

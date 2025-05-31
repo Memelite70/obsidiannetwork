@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retro Bowl College</title>
+  <script src="uv/uv.bundle.js"></script>
+<script src="uv/uv.config.js"></script>
+<script src="register-sw.js"></script>
+<script>
+"use strict";
+let destination = "";
+
+try {
+  destination = "https://classroomjq.github.io/retro-bowl-college/";
+} catch (err) {
+  alert(`Bad # string or bad URL. Got error:\n${err}`);
+  throw err;
+}
+
+registerSW()
+  .then(() => {
+    window.open(
+      __uv$config.prefix + __uv$config.encodeUrl(destination),
+      "_self"
+    );
+  })
+  .catch((err) => {
+    alert(`Encountered error:\n${err}`);
+  });</script>
+ </head>
+<body>
+</body>
+</html>

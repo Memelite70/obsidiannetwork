@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#leftFloatAd{
+  position: fixed;
+      top: 75px;
+      left: 15px;
+      width: 120px;
+      height: 610px;
+      cursor: cell;
+}
+#rightFloatAd{
+  position: fixed;
+      top: 75px;
+      right: 15px;
+      width: 120px;
+      height: 610px;
+      cursor: cell;
+}
+html, body, #content{
+background: url("/assets/bg-blue.jpg");
+  background-size: cover;
+}
+html{
+width: 100%;
+height: 100%;
+}
+</style>
+
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+   <link rel="stylesheet" href="css/general.css">
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+   <script src="server.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelector(".title-uv").innerHTML = 'Web Browser &middot; Geometry Tryhard';
+    document.querySelector(".hostname").innerHTML = window.location.hostname;
+});
+</script>
+</head>
+<body style='font-family: "Poppins", sans-serif;'>
+   <div id="header"></div> 
+   <div style="background: url("/assets/bg-blue.jpg"); background-size: cover;" id="content">
+
+      <form style="background: url("/assets/bg-blue.jpg"); background-size: cover;" class="searchbar" id="uv-form">
+         <h1 class='title-uv'>Proxy</h1>
+         <h2>Search the web with Google</h2>
+         <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/> 
+         <input id="uv-address" class="search-bar" type="text" placeholder="  Search Google or type a URL" class="form__input"/>
+         <h3 style="color: white">To make the proxy function, once you input your search, if the screen goes white or says TypeError: Failed to Fetch, right-click the screen and select reload/refresh frame until it works. You should only need to do this the first time using this proxy or if you reset your cookies/browser cache.</h3>
+         <p id="uv-error" style="color: red;"></p>
+         <pre id="uv-error-code" style="color: red;"></pre>
+      </form>
+
+   </div>
+         <script src="uv/uv.bundle.js" defer></script>
+      <script src="uv/uv.config.js" defer></script>
+      <script src="register-sw.js" defer></script>
+      <script src="search.js" defer></script>
+      <script src="index.js" defer></script>
+      <script src="error.js" defer></script>
+
+   <center>
+      <center>
+         <br>
+      <div style='font-family: "Poppins", sans-serif;' class="credits">
+         <h4>Credits to TIW for making <a href="https://github.com/TheTIW/UV-Static/tree/main" target="_blank">UV Static</a> and to <a href="https://github.com/voucan/proxy" target="_blank">Voucan on Github</a> for the tab system.<br><span class="hostname">This Website</span> is not responsible for any trouble you may get in because of your use of the provided services. We are not responsable for any content seen on this service.</h4>
+         <br>
+         
+      </div>
+   </center>
+</body>
+</html>
