@@ -15,7 +15,7 @@ function loadgame(gameURL, unusedVar) {
     gmsTitle.forEach(gmsTitle => {
       gmsTitle.innerHTML = localStorage.getItem('Title');
     });
-      document.title = localStorage.getItem('Title') + ' Unblocked &middot; Obsidian Network';
+      document.title = localStorage.getItem('Title') + ' Unblocked - Obsidian Network';
     gmsTitle.innerHTML = localStorage.getItem('Title');
     element.src = '/loader.html?game=' + gameURL;
     window.localStorage.setItem('gameURL', element.src);
@@ -28,7 +28,7 @@ function loadgame(gameURL, unusedVar) {
     localStorage.setItem("gameURL", gameURL);
 
     const text = gameURL;
-    const snippet = "./assets/games/";
+    const snippet = "/gms/";
     const index = text.indexOf(snippet);
 
     let game2;
