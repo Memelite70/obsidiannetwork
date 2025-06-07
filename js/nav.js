@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+/*document.addEventListener('DOMContentLoaded', function() {
     fetch('/js/nav.html')
         .then(response => {
             if (!response.ok) {

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <script src="/js/spinner.js"></script>
   <script src="/js/nav.js"></script>
   <script src="/js/games.js"></script>
   <script src="/js/settings.js"></script>
   <script src="/js/colorpicker.js"></script>
+  <script src="/js/footer.js"></script>
   <script>
     function changeGame(){
         const input = document.getElementById('gmes');
@@ -121,28 +123,30 @@
 </div>
   <a id="settings" href="/settings.html"><img src="/svg/settings.svg" class="navicon"></a>
   <div class="nav2" id="nav2">
-    <span>
+    <span>      
       <a class="link-box" href="/"><img src="/svg/home.svg" class="navicon"><span class="navtext">Home</span></a>
       <br>
       <a class="link-box" href="/games.html"><img src="/svg/allgames.svg" class="navicon"><span class="navtext">All Games</span></a>
       <br>
-      <a class="link-box" href="/games.html"><img src="/svg/popular.svg" class="navicon"><span class="navtext">Popular Games</span></a>
+      <a class="link-box" href="/games.html?query=/popular.html"><img src="/svg/popular.svg" class="navicon"><span class="navtext">Popular Games</span></a>
       <br>
-      <a class="link-box" href="/games.html"><img src="/svg/sports.svg" class="navicon"><span class="navtext">Sports Games</span></a>
+      <a class="link-box" href="/games.html?query=/sports.html"><img src="/svg/sports.svg" class="navicon"><span class="navtext">Sports Games</span></a>
       <br>      
-        <a class="link-box" href="/games.html"><img src="/svg/guns.svg" class="navicon"><span class="navtext">Shooter Games</span></a>
+        <a class="link-box" href="/games.html?query=/shooter.html"><img src="/svg/guns.svg" class="navicon"><span class="navtext">Shooter Games</span></a>
         <br>
-        <a class="link-box" href="/games.html"><img src="/svg/d-pad.svg" class="navicon"><span class="navtext">Parkour Games</span></a>  <br>
-        <a class="link-box" href="/games.html"><img src="/svg/racing.svg" class="navicon"><span class="navtext">Car Games</span></a>
+        <a class="link-box" href="/games.html?query=/parkour.html"><img src="/svg/d-pad.svg" class="navicon"><span class="navtext">Parkour Games</span></a>  <br>
+        <a class="link-box" href="/games.html?query=/car.html"><img src="/svg/racing.svg" class="navicon"><span class="navtext">Car Games</span></a>
 
         <br>
-        <a class="link-box" href="/games.html"><img src="/svg/horror.svg" class="navicon"><span class="navtext">Horror Games</span></a>
+        <a class="link-box" href="/games.html?query=/horror.html"><img src="/svg/horror.svg" class="navicon"><span class="navtext">Horror Games</span></a>
         <br>
-        <a class="link-box" href="/games.html"><img src="/svg/survival.svg" class="navicon"><span class="navtext">Survival Games</span></a>
+        <a class="link-box" href="/games.html?query=/survival.html"><img src="/svg/survival.svg" class="navicon"><span class="navtext">Survival Games</span></a>
         <br>
-        <a class="link-box" href="/games.html"><img src="/svg/clicker.svg" class="navicon"><span class="navtext">Mouse-only Games</span></a>
+        <a class="link-box" href="/games.html?query=/mouse.html"><img src="/svg/clicker.svg" class="navicon"><span class="navtext">Mouse-only Games</span></a>
         <br>
+
     </span>
+
 
   </div>
 <div id="particles-js"> </div>
@@ -161,13 +165,13 @@
     </select>
 
   <div id="games" class="games_big"></div>
-
+<div id="footer"></div>
     
   </div></center>
 </div>
 
   <div class="iconName">
-    <h1 class="rainbow"><a href="/">OBSIDIAN NETWORK</a></h1>
+    <h1 class="rainbow"><a href="/">OBSIDIAN GAMES</a></h1>
   </div>
 
 <script src="../particles.js"></script>

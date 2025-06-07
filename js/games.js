@@ -8,16 +8,14 @@ function loadgame(gameURL, unusedVar) {
   if(gameName){
     localStorage.setItem('Title', gameName);
 
-    if(gameName === "Snow Rider 3D"){
-      window.location.href = "/";
-    }
+
   }
   if (element !== null) {
     const gmsTitle = document.querySelectorAll('#gmsName');
     gmsTitle.forEach(gmsTitle => {
       gmsTitle.innerHTML = localStorage.getItem('Title');
     });
-      document.title = localStorage.getItem('Title') + ' Unblocked · Obsidian Network';
+      document.title = localStorage.getItem('Title') + ' Unblocked &middot; Obsidian Network';
     gmsTitle.innerHTML = localStorage.getItem('Title');
     element.src = '/loader.html?game=' + gameURL;
     window.localStorage.setItem('gameURL', element.src);
