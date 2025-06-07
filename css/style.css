@@ -216,12 +216,14 @@ h1{
   border: none;
   border-radius: 15px;
   transition: 0.3s ease;
+  margin-bottom: 10px;
 }
 .get_started:hover{
   rotate: 3deg;
   filter: brightness(1.2); 
   height: 60px;
   width: 240px;
+  margin-bottom: 0;
 }
 .games_big{
   height: 100%;
