@@ -1,0 +1,64 @@
+<head>
+<script>
+function launchRoblox1() {
+      var win = window.open('','_blank','width=1600,height=900');
+      if (window.focus) {win.focus()}
+      win.document.body.style.margin = '0';
+      win.document.body.style.height = '100vh';
+      win.document.title = "Roblox - " + window.location.hostname;
+      var iframe = win.document.createElement('iframe');
+      iframe.style.border = 'none';
+      iframe.style.width = '100%';
+      iframe.style.height = '100%';
+      iframe.style.margin = '0';
+      iframe.src = "https://nowgg.geo11.fun";
+      win.document.body.appendChild(iframe);
+    }
+
+</script>
+<script src="js/style.js">styleload();</script>
+<script src="js/internalloader.js">styleload();</script>
+<script src="js/gtag.js" onload="gtagLoad();"></script>
+<link id="style" rel="stylesheet" href="">
+<style>
+  .loadbutton1 {
+  margin: 0;
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  height: 6em;
+  }
+  .loadbutton:hover{
+    height: 6em;
+  }
+
+  #imageforgame {
+background-attachment: fixed;  
+height:100%;
+border: none;
+margin: -8px;
+background-size: 100px;
+
+  }
+</style>
+
+<script>
+
+function getUrlParameter(name) {
+    name = name.replace(/[[]/, '\$$[').replace(/[]$$]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+};
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const gameImage = localStorage.getItem('gameimage');
+    document.getElementById('imageforgame').style.backgroundImage = `url(${gameImage})`;
+  });
+
+</script>
+</head><body onload="styleload();"><div onload="styleload();" id="imageforgame"><center><div class="loadbutton1"><button onclick="launchRoblox1();" style="width: 10em; height: 6em;"><h1>Roblox 1</h1></button><br>
+<button onclick="window.open('https://robloxohnowpleasedontlolhehehehaha.vercel.app/','_blank','width=1600,height=900');"style="width: 10em; height: 6em;"><h1>Roblox 2</h1></button></div>
+</center></div></body>
