@@ -1,0 +1,219 @@
+   <center><title>Henry Stickmin</title><script src="/js/games/index.js"></script>
+   <a href="../flash/index.html?game=SWF/henry-stickmin-bank.swf" title="Breaking the Bank">
+    <image src="BankH.webp" alt="Logo" style="width: 200px; height: 200px;"/>
+  </a>
+     <a href="../flash/index.html?game=SWF/henry-stickmin-prison.swf" title="Escaping the Prison">
+    <image src="Prison.webp" alt="Logo" style="width: 200px; height: 200px;"/>
+  </a>
+     <a href="../flash/index.html?game=SWF/henry-stickmin-diamond.swf" title="Stealing the Diamond">
+    <image src="StealD.webp" alt="Logo" style="width: 200px; height: 200px;"/>
+  </a>
+     <a href="../flash/index.html?game=SWf/henry-stickmin-airship.swf" title="Infiltrating the Airship">
+    <image src="Airship.webp" alt="Logo" style="width: 200px; height: 200px;"/>
+  </a>
+     <a href="../flash/index.html?game=SWF/henry-stickmin-complex.swf" title="Fleeing the Complex">
+    <image src="Complex.webp" alt="Logo" style="width: 200px; height: 200px;"/>
+  </a>
+   </center>
+   <head><style>
+     .games {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  justify-content: space-between;
+  grid-gap: 2rem;
+  margin: 1rem 2rem 2rem 2rem;
+  background: linear-gradient(60deg, #000000 0%, #143C21 100%);
+}
+
+.game {
+  height: 240px;
+  width: 200px;
+
+  text-decoration: none;
+  border-radius: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  -webkit-user-select: none;
+  user-select: none;
+  position: relative;
+  transition: transform 0.1s;
+}
+
+.game:hover {
+  transform: scale(0.925);
+}
+
+.game[hidden] {
+  display: none;
+}
+
+.game-image {
+  background: #143C21;
+  object-fit: cover;
+  height: 200px;
+  width: 200px;
+  border-radius: 15px 15px 0 0;
+}
+
+.game-text {
+  line-height: 40px;
+  width: 200px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #ffffff;
+  padding: 0 10px;
+  font-size: 18px;
+}
+  h1 {
+  font-family: monospace;
+  color: #ffffff;
+  font-size: 28px;
+}
+p {
+  font-family: monospace;
+  color: #ffffff;
+  font-size: 18px;
+}
+h2 {
+  font-family: monospace;
+  color: #ffffff;
+  font-size: 34px;
+}
+html {
+  scroll-behavior: smooth;
+}
+body{
+  background: linear-gradient(60deg, #000000 0%, #143C21 100%);}
+.button {
+  float: center;
+  color: #1cc49d;
+
+  background-color: #1b2f31;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3em;
+  width: 8em;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition-duration: 0.3s;
+  margin: 4px 2px;
+}
+
+.button:hover {
+  color: #1b2f31;
+  background-color: #1cc49d;
+  font-size: 16.5px; 
+  font-weight: 700;
+  transition-duration: 0.3s; 
+}
+
+.topnav {
+   background: #1b2f31;
+background: linear-gradient(90deg, #000000 0%, #1b2f31) 100%);
+  overflow: hidden;
+  border-radius: 50px;
+  position: sticky;
+}
+.topnav a{
+  float: left;
+  color: #1cc49d;
+  background-color: #1b2f31;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3em;
+  width: 8em;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+
+
+}
+.topnav a{transition-duration: 0.3s}
+.topnav a:hover {
+    color: #1b2f31;
+  background-color: #1cc49d;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3em;
+  width: 8em;
+  text-decoration: none;
+ font-size: 16.5px;
+  font-weight: 700;
+}
+.topnav a.active{
+  color: #1b2f31;
+  background-color: #1cc49d;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3em;
+  width: 8em;
+  text-decoration: none;
+ font-size: 16px;
+  font-weight: 700;
+}
+.topnav a.active:hover{
+  color: #1b2f31;
+  background-color: #1cc49d;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3em;
+  width: 8em;
+  text-decoration: none;
+ font-size: 16.5px;
+  font-weight: 700;
+}
+.topnav a:hover{
+  float: left;
+  color: #1cc49d;
+  background-color: #1b2f31;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3em;
+  width: 8em;
+  text-decoration: none;
+  font-size: 16.5px;
+  font-weight: 600;
+}
+li {
+  font-family: monospace;
+  color: #ffffff;
+  font-size: 16px;
+
+
+}
+.topnav button{
+  float: left;
+  color: #1cc49d;
+  background-color: #1b2f31;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3em;
+  width: 8em;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+
+
+}
+     </style>
+   </head>
