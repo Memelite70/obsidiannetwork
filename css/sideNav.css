@@ -10,3 +10,6 @@
   width: calc(100% - 20em);
   left: 20em; 
 }
+.gamesPageAdvertisement{
+width: calc(45vw - 24em)
+}
