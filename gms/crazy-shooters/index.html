@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Crazy Shooters Unblocked</title>
+	<script src="/js/games/index.js"></script>
+	<meta property="og:title" content="Crazy Shooters" />
+	<meta property="og:image" content="512.jpg" />
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+	
+
+	  
+    <script src="TemplateData/UnityProgress.js"></script>  
+    <script src="Build/UnityLoader.js"></script>
+	<script src="https://unblocked-games.s3.amazonaws.com/games/unblocked.js"></script>
+	
+	<style>
+	 #links2{position:absolute;right:0;bottom:0;padding:8px;list-style:none;background-color:#fff;border-top-left-radius:5px}#links2 ul{list-style-type:none;margin:0;padding:0}#links2 ul li{display:inline}#links2 ul li a{color:#000;display:inline-block;margin-right:10px;text-decoration:none}#links2 ul li a.visited{color:#000}#links2 ul li a:hover{opacity:.85}
+      </style>
+	
+    <script>
+		var gameInstance = UnityLoader.instantiate("gameContainer", "Build/game.json", {onProgress: UnityProgress});
+	
+	  
+	function FitScreen(){
+       var w = 960;
+       var h = 540;
+       var availWidth = window.innerWidth;
+       var availHeight = window.innerHeight;
+	   
+       var canvas = document.getElementById("#canvas");
+       if(availWidth/availHeight>w/h){
+         height = availHeight;
+         width = (height*w/h);
+      }else{
+         width = availWidth;
+         height = width*h/w;
+      }
+	  
+      canvas.width = width;
+      canvas.height = height;
+	  
+       document.getElementById("gameContainer").style.width=width + "px";
+       document.getElementById("gameContainer").style.height=height + "px";
+	   
+    }
+	
+	function OnLoadX()
+    {
+        unblockedOnLoadX(document);
+        
+        FitScreen();
+    }
+
+    </script>
+  </head>
+  <body onfocus="FitScreen();" onload="OnLoadX();" onresize="FitScreen();" style="width:100%; height:100%">
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: auto; height: auto"></div>
+    </div>
+	
+	<div id="links2" hidden="true">
+      
+    </div>
+	
+  </body>
+</html>
