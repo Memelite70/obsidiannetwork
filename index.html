@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+    var eeeeee = localStorage.getItem("eeeeee");
+    if(eeeeee){
+      localStorage.setItem('eeeeee', (isNaN(parseInt(eeeeee)) ? 1 : parseInt(eeeeee) + 1));
+      
+    }else{
+      window.location.href = "/cookieconfirm.html"
+    }
+    
+  </script>
   <style>
     #footer{
- 
+      position: absolute;
       justify-content: center;
       text-align: center;
-      margin-top: 36%;
+      bottom: 0;
+      width: 100%;
     }
     </style>
   <title>Home &middot; Obsidian Games</title>

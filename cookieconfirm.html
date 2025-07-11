@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    :root {
+      --color-bg: #282928;
+      --color-1: #000000;
+      --color-2: #ffffff;
+      --color-3: #7e1dfb;
+      --color-4: #1f1926;
+      --color-5: #b1a8b9;
+      --color-6: #4c4452;
+      --color-7: #101010;
+      --color-8: 		#150b23;
+      --color-9: 		#3a126c;
+      --color-12: var(--color-3);
+    }
+  </style>
+  <script>
+    function acceptCookies() {
+      var eeeeee = localStorage.getItem("eeeeee");
+      localStorage.setItem('eeeeee', parseInt(eeeeee) + 1);
+      const banner = document.getElementById('tobenuked');
+      if (banner) banner.remove();
+      window.location.href="/"
+    }
+  </script>
+</head>
+<body>
+  <link rel="stylesheet" media="screen" href="css/style.css">
+  <div id="particles-js"> </div>
+  <script src="../particles.js"></script>
+  <script src="js/nocookiesbg.js"></script>
+  <div id="tobenuked" class="cookie_bg" style="text-align: center;">
+    <div class="cookie-consent">
+      <span class="textCookies">
+        This website uses cookies. By continuing to use this site, you agree to our <a style="color: #0000EE; text-decoration: underline;" target="_blank" href="/cookies.html">Cookie</a>, <a target="_blank" style="color: #0000EE; text-decoration: underline;" href="/legal.html" target="_blank">Privacy</a>, and <a style="color: #0000EE; text-decoration: underline;" href="/dmca.html" target="_blank">DMCA</a> policies, and to the measurement of your unique advertising ID and IP to tailor ads and gather demographic information such as location and view metrics.
+      </span><br>
+      <button class="cookiesButton" onclick="acceptCookies()">Accept and continue</button>
+    </div>
+  </div>
+</body>

@@ -28,7 +28,7 @@ function loadgame(gameURL, unusedVar) {
     localStorage.setItem("gameURL", gameURL);
 
     const text = gameURL;
-    const snippet = "/gms/";
+    const snippet = "./assets/games/";
     const index = text.indexOf(snippet);
 
     let game2;

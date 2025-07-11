@@ -2,6 +2,16 @@
 <html lang="en">
 <head>
   <script>
+    var eeeeee = localStorage.getItem("eeeeee");
+    if(eeeeee){
+
+
+    }else{
+      window.location.href = "/cookieconfirm.html"
+    }
+
+  </script>
+  <script>
   var path = window.location.pathname;
   if(path.includes('static')){
     window.location.href = window.location.href;

@@ -5,7 +5,7 @@ function cookiesDo() {
   const existing = document.getElementById('tobenuked');
   if (existing) return; // Avoid adding the banner again
 
-  const cook = localStorage.getItem('cookiesVar');
+  const cook = localStorage.getItem('eeeeee');
   if (cook === 'yes') return;
 
   const embed = document.createElement('div');
@@ -32,4 +32,5 @@ function denyCookies() {
   const banner = document.getElementById('tobenuked');
   if (banner) banner.remove();
 }
-document.addEventListener('DOMContentLoaded', cookiesDo);
+
+//document.addEventListener('DOMContentLoaded', cookiesDo);

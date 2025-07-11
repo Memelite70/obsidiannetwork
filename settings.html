@@ -1,6 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+    var eeeeee = localStorage.getItem("eeeeee");
+    if(eeeeee){
+
+
+    }else{
+      
+      window.location.href = "/cookieconfirm.html"
+    }
+
+  </script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function(){
+  var views = localStorage.getItem('eeeeee');
+  var viewNumDisplay = document.getElementById('eeeeee');
+  viewNumDisplay.innerHTML = views - 1;
+    var s=document.getElementById('s');
+    if(views==="2"|views==="1"){
+      s.innerHTML=' (not a lot)';
+    }
+}
+)
+</script>
   <script src="/js/nav.js"></script>
   <title>Settings &middot; Obsidian Games</title>
   <script src="/js/style.js"></script>
@@ -63,7 +86,8 @@
 <div id="particles-js"> </div>
 <div class="main">
   <!--<button onclick="switchstyles();">switch</button>-->
-<br><center><h1><span class="rainbow">Settings</span><br></h1></center>
+<br><center><h1><span class="rainbow">Settings</span><br></h1>
+</center>
 
   <br>
   <div class="setting"><table>
@@ -93,6 +117,7 @@
       <td><input class="color" type="color" id="color_3" name="head" value="#e66465" onchange="colorChange(this.value)" /><button onclick="colorChange(`#7e1dfb`)"  class="settingButton" id="colorButton">Reset</button></td>
     </tr>
     </table>
+    <center><h1>You have visited the homepage for this website <span id="eeeeee">a few</span> time<span id="s">s</span>.</h1></center>
   </div>
 
 <div id="footer"></div>
