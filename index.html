@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="/js/gtag.js"></script>
   <script>
     var eeeeee = localStorage.getItem("eeeeee");
     if(eeeeee){
       localStorage.setItem('eeeeee', (isNaN(parseInt(eeeeee)) ? 1 : parseInt(eeeeee) + 1));
+      gtagLoad();
       
     }else{
       window.location.href = "/cookieconfirm.html"
@@ -28,6 +30,7 @@
   <script src="/js/colorpicker.js"></script>
   <script src="/js/cookies.js"></script>
   <script src="/js/footer.js"></script>
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <link id="style" rel="stylesheet" href="">
   <link rel="stylesheet" media="screen" href="css/style.css">

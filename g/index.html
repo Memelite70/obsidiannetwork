@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="/js/gtag.js"></script>
+  <script>
+    var eeeeee = localStorage.getItem("eeeeee");
+    if(eeeeee){
+      gtagLoad();
+      
+    }else{
+      window.location.href = "/cookieconfirm.html"
+    }
+    
+  </script>
   <script src="/js/spinner.js"></script>
   <script src="/js/settings.js"></script>
   <script src="/js/colorpicker.js"></script>

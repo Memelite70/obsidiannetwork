@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="/js/gtag.js"></script>
   <script>
     var eeeeee = localStorage.getItem("eeeeee");
     if(eeeeee){
-
-
-    }else{
+      gtagLoad();
       
+    }else{
       window.location.href = "/cookieconfirm.html"
     }
-
+    
   </script>
   <script>
   document.addEventListener('DOMContentLoaded', function(){
