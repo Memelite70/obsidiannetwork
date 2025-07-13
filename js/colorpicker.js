@@ -6,7 +6,11 @@ function colorChange(newColor){
 }
 function styChange(){
   var sty = document.createElement('style');
-  var colorValue = localStorage.getItem('color_3');
+    if(localStorage.getItem('color_3')){
+  var colorValue = localStorage.getItem('color_3');}
+    else{
+       var colorValue = '#7e1dfb';
+    }
   var colorValue2 = darkenHex(colorValue, 150);
   var colorValue3 = darkenHex(colorValue, 70);
   var colorValue4 = invertColor(colorValue);
@@ -27,7 +31,7 @@ window.addEventListener("DOMContentLoaded", function(){
     sty2.innerHTML = ':root {--color-12: #212121;}';
     document.head.appendChild(sty2);
   }
-      
+
   styChange();
   var colorPicker = document.getElementById('color_3');
   if (colorPicker) {
