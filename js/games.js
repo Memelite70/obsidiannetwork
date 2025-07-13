@@ -39,6 +39,6 @@ function loadgame(gameURL, unusedVar) {
       game2 = gameURL;
     }
 
-    window.location.href = "/g/?game=" + gameURL;
+    window.location.href = "/g/"//?game= + gameURL;
   }
 }

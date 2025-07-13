@@ -44,7 +44,7 @@
   }
   document.addEventListener('DOMContentLoaded', function() {
     const iframe = document.getElementById('gameframe_frame_container');
-    const storedSrc = paramGet('game');
+    const storedSrc = localStorage.getItem('gameURL');
     const gmsTitle = document.querySelectorAll('#gmsName');
     gmsTitle.forEach(gmsTitle => {
       gmsTitle.innerHTML = localStorage.getItem('Title');
