@@ -21,7 +21,7 @@ function loadgame(gameURL, unusedVar) {
     gmsTitle.innerHTML = localStorage.getItem('Title');
     element.src = '/loader.html?game=' + gameURL;
     window.localStorage.setItem('gameURL', element.src);
-    element.src=element.src;
+
     element.contentWindow.focus();
     scroll.scrollIntoView({ 
       behavior: "smooth" 
