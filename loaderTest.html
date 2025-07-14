@@ -1,0 +1,160 @@
+<head>
+  <script>
+    function getUrlParameter(name) {
+        name = name.replace(/[[]/, '\$$[').replace(/[]$$]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    };
+    window.addEventListener("DOMContentLoaded", function(){
+      var bgImage=document.querySelector(".bgImage");
+      bgImage.src = localStorage.getItem('gameimage');
+      var dispImage=document.querySelector(".displayImage");
+      dispImage.src = localStorage.getItem('gameimage');
+      var name=document.getElementById("name");
+      name.innerHTML = localStorage.getItem('Title');
+    })
+  </script>
+  <script>
+    window.addEventListener("DOMContentLoaded", function(){
+      var button=document.getElementById("playGame");
+      button.addEventListener("click", function(){
+        var gameframe=document.createElement("iframe");
+        gameframe.className = "game_frame";
+        gameframe.src=getUrlParameter('game');
+        gameframe.style.opacity="1";
+        gameframe.style.display="block";
+        document.body.appendChild(gameframe);
+      })
+    })
+    document.addEventListener('contextmenu', function(event){
+      event.preventDefault()
+    })
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    html{
+      background-color: #333333;
+      transition: 0.5s ease;
+      font-family: "Roboto", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 100;
+      font-style: normal;
+    
+    }
+    .adnest{
+      z-index: 4;
+      position: absolute;
+      width: 95%;
+      height: 90%;
+      background-color: #f9f9f9;
+      top: 5%;
+      left: 2.5%;
+      border-radius: 3vh;
+      opacity: 0.7;
+      /*border: calc(calc(1vw + 1vh) / 2) solid #555555;*/
+      transition: 0.5s ease;
+    }
+    .adnest:hover {
+    }
+    .bgImage{
+      width: 100%;
+      height: 100%;
+       filter: blur(20px);
+      opacity: 0.5;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+.adnestchild{
+  position: absolute;
+  width: 95%;
+  height: 90%;
+  top: 5%;
+  left: 2.5%;
+  z-index: 6;
+  box-shadow: 0 0 30px rgba(16, 16, 16, 0.7);
+  transition: 0.5s ease;
+  border-radius: 3vh;
+}
+    .adnestchild:hover {
+      /*box-shadow: 0 0 30px rgba(16, 16, 16, 0.5);*/
+    }
+    .game_frame{
+      position:fixed; 
+      top:0; 
+      left:0; 
+      bottom:0; 
+      right:0; 
+      width:100%; 
+      height:100%; 
+      border:none; 
+      margin:0; 
+      padding:0; 
+      overflow:hidden; 
+      z-index:999999;
+      opacity: 0;
+      background-color: black;
+      transition: 0.5s ease;
+      display: none;
+    }
+    .playGame{
+      position: fixed;
+      top: calc(50vh - 2.25em);
+      left: 10vw;
+      width: 8em;
+      height: 4.5em;
+      font-size: 3.5vh;
+      background: #5c16b6;
+      transition: 0.6s ease;
+      z-index: 8;
+      border-radius: 1.4em;
+      border: 0;
+      color: #ffffff;
+      box-shadow: 0 0 30px rgba(16, 16, 16, 0.7);
+    }
+    .playGame:hover{
+      background: #555555;
+    }
+    .displayImage{
+      width: 20vw;
+      height: 20vw;
+      border-radius: 40vh;/*calc(calc(40vw + 40vh) / 2)*/;
+      position: fixed;
+      top: calc(calc(100vh - 20vw) / 2);
+      right: 16vw;
+      opacity: 1;
+      z-index: 8;
+      box-shadow: 0 0 30px rgba(16, 16, 16, 0.7);
+      filter: blur(1.1px);
+    }
+    .gameName{
+      font-size: 5vh;
+      position: fixed;
+      top: 56vh;
+      left: 10vw;
+    }
+    .websTitle{
+      font-size: 6vh;
+      position: fixed;
+      top: 62vh;
+      left: 10vw;
+      background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body><button id="playGame" class="playGame">PLAY&#9658;</button>
+  <img class="bgImage" src="" onerror="this.src='/globe.svg'">
+  <div class="adnest">
+
+  </div>
+  
+  <div class="adnestchild">
+      <h1 class="gameName"><span id="name">Play Game</span> Unblocked at</h1>
+      <h1 class="websTitle"> Obsidian-Games.com</h1>
+    </div>
+  <img class="displayImage">
+</body>

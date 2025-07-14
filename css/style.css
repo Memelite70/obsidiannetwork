@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 /* particles */body{ margin:0;} canvas{display: block; } /* ---- particles.js container ---- */ #particles-js{ position:absolute; width: 100%; height: 100%; top: 0; bottom: 0; left: 0; background: var(--color-bg); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } /* ---- stats.js ---- */ 
 html{
+  scrollbar-color: var(--color-3) var(--color-7);
   background-color: var(--color-bg);
   width: 100%;
   height: 100%;
@@ -87,7 +88,6 @@ body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; }
   background-color: var(--color-12);
   border-radius: 10px;
   transition: 0.3s ease;
-  loading: forced;
 }
 .main{
   position: relative;
@@ -96,11 +96,12 @@ body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; }
   width: calc(100% - 6em);
   height: calc(100vh - calc(5em + 2px));
   overflow: scroll;
-  -ms-overflow-style: none;  
+  overflow-x: hidden;
+  /*-ms-overflow-style: none;  
   scrollbar-width: none;
 }
 .main::-webkit-scrollbar {
-  display: none;
+  display: none;*/
 }
 .navtext{
   position: relative;
@@ -294,12 +295,22 @@ border-radius: 6px;
   top: -11px;
   margin-bottom: 0;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
+  width: calc(50vw - 140px);
+
+  overflow-y: hidden;
+    -ms-overflow-style: none;  
+    scrollbar-width: none;
+  height: 1.15em;
+  }
+  .gmsName::-webkit-scrollbar {
+    display: none;
+  }
+
 #settings{
   top: 0em;
   position: fixed;
   float: right;
-  right: 0.5em;
+  right: 0em;
   z-index:9999999; 
 }
 
