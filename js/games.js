@@ -2,6 +2,8 @@ function loadgame(gameURL, unusedVar) {
 
   const parentElement = event.target.closest('div');
   const scroll = document.getElementById("scroll");
+  const imageElement = parentElement.querySelector('img');
+  localStorage.setItem('gameimage', imageElement.src)
   const h1Element = parentElement.querySelector('h1');
   const gameName = h1Element.innerText;
   const element = document.getElementById("gameframe_frame_container");
@@ -19,6 +21,7 @@ function loadgame(gameURL, unusedVar) {
     gmsTitle.innerHTML = localStorage.getItem('Title');
     element.src = '/loader.html?game=' + gameURL;
     window.localStorage.setItem('gameURL', element.src);
+    element.src=element.src;
     element.contentWindow.focus();
     scroll.scrollIntoView({ 
       behavior: "smooth" 
@@ -28,7 +31,7 @@ function loadgame(gameURL, unusedVar) {
     localStorage.setItem("gameURL", gameURL);
 
     const text = gameURL;
-    const snippet = "./assets/games/";
+    const snippet = "/gms/";
     const index = text.indexOf(snippet);
 
     let game2;
