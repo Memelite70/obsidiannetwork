@@ -45,6 +45,12 @@
   document.addEventListener('DOMContentLoaded', function() {
     const iframe = document.getElementById('gameframe_frame_container');
     const storedSrc = localStorage.getItem('gameURL');
+    if(storedSrc.includes('loader.html')){
+        iframe.src = storedSrc;
+    }
+    else{
+          iframe.src = '/loader.html?game=' + storedSrc;
+    }
     const gmsTitle = document.querySelectorAll('#gmsName');
     gmsTitle.forEach(gmsTitle => {
       gmsTitle.innerHTML = localStorage.getItem('Title');
@@ -52,7 +58,6 @@
     /*if(storedSrc === "/gms/snow-rider-3d/"){
       window.location.href="/"
     }*/
-    iframe.src = '/loader.html?game=' + storedSrc;
     });
 
   function fullscreen(){

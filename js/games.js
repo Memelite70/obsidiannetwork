@@ -19,8 +19,13 @@ function loadgame(gameURL, unusedVar) {
     });
       document.title = localStorage.getItem('Title') + ' Unblocked - Obsidian Games';
     gmsTitle.innerHTML = localStorage.getItem('Title');
-    element.src = '/loader.html?game=' + gameURL;
-    window.localStorage.setItem('gameURL', element.src);
+    if(gameURL.includes('loader.html')){
+        element.src = gameURL;
+    }
+    else{
+          element.src = '/loader.html?game=' + gameURL;
+    }
+
 
     element.contentWindow.focus();
     scroll.scrollIntoView({ 
