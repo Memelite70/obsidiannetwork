@@ -1,5 +1,5 @@
 function loadgame(gameURL, unusedVar) {
-
+  localStorage.setItem('gameURL', gameURL);
   const parentElement = event.target.closest('div');
   const scroll = document.getElementById("scroll");
   const imageElement = parentElement.querySelector('img');
@@ -25,6 +25,7 @@ function loadgame(gameURL, unusedVar) {
     else{
           element.src = '/loader.html?game=' + gameURL;
     }
+
 
 
     element.contentWindow.focus();

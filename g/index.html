@@ -182,6 +182,12 @@
     const option=input.options[input.selectedIndex].value;
     const display=document.getElementById('games');
     document.title = optionw + " · Obsidian Network";
+window.addEventListener("keydown", function(e) {
+    if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
+        e.preventDefault();
+    }
+}, false);
+
   </script>
   <script src="/js/style.js"></script>
   <link id="style" rel="stylesheet" href="">
