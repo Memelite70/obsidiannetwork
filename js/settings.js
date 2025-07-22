@@ -95,6 +95,9 @@ function sideNavChange(){
         if (link){
             link.parentNode.removeChild(link);
         }
+else{
+window.location.reload();
+}
     }
     else{
         localStorage.setItem("sideNav", "true");
