@@ -12,12 +12,11 @@
     if(eeeeee){
       gtagLoad();
       
-    }//else{
-      //window.location.href = "/cookieconfirm.html"
-    //}
+    }else{
+      window.location.href = "/cookieconfirm.html"
+    }
     
   </script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9XL9TXRPN2"></script><script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}gtag('js', new Date()); gtag('config', 'G-9XL9TXRPN2');</script>
   <script>
   document.addEventListener('DOMContentLoaded', function(){
   var views = localStorage.getItem('eeeeee');
@@ -41,6 +40,7 @@
   <link rel="stylesheet" media="screen" href="css/style.css">
 </head>
 <body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9XL9TXRPN2"></script><script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}gtag('js', new Date()); gtag('config', 'G-9XL9TXRPN2');</script>
   <div id="spinny" style="background: #101010; position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:9999999999999; transition: opacity 1.1s ease;">
 
 
@@ -64,29 +64,28 @@
 </div>
   <div class="nav2" id="nav2">
     <span>      
-  <a class="link-box" href="/"><img src="/svg/home.svg" class="navicon"><span class="navtext">Home</span></a>
-  <br>
-  <a class="link-box" href="/games.html"><img src="/svg/allgames.svg" class="navicon"><span class="navtext">All Games</span></a>
-  <br>
-  <a class="link-box" href="/popular.html"><img src="/svg/popular.svg" class="navicon"><span class="navtext">Popular Games</span></a>
-  <br>
-  <a class="link-box" href="/sports.html"><img src="/svg/sports.svg" class="navicon"><span class="navtext">Sports Games</span></a>
-  <br>      
-    <a class="link-box" href="/shooter.html"><img src="/svg/guns.svg" class="navicon"><span class="navtext">Shooter Games</span></a>
-    <br>
-    <a class="link-box" href="/parkour.html"><img src="/svg/d-pad.svg" class="navicon"><span class="navtext">Parkour Games</span></a>  <br>
-    <a class="link-box" href="/car.html"><img src="/svg/racing.svg" class="navicon"><span class="navtext">Car Games</span></a>
+      <a class="link-box" href="/"><img src="/svg/home.svg" class="navicon"><span class="navtext">Home</span></a>
+      <br>
+      <a class="link-box" href="/games.html"><img src="/svg/allgames.svg" class="navicon"><span class="navtext">All Games</span></a>
+      <br>
+      <a class="link-box" href="/games.html?query=/popular.html"><img src="/svg/popular.svg" class="navicon"><span class="navtext">Popular Games</span></a>
+      <br>
+      <a class="link-box" href="/games.html?query=/sports.html"><img src="/svg/sports.svg" class="navicon"><span class="navtext">Sports Games</span></a>
+      <br>      
+        <a class="link-box" href="/games.html?query=/shooter.html"><img src="/svg/guns.svg" class="navicon"><span class="navtext">Shooter Games</span></a>
+        <br>
+        <a class="link-box" href="/games.html?query=/parkour.html"><img src="/svg/d-pad.svg" class="navicon"><span class="navtext">Parkour Games</span></a>  <br>
+        <a class="link-box" href="/games.html?query=/car.html"><img src="/svg/racing.svg" class="navicon"><span class="navtext">Car Games</span></a>
 
-    <br>
-    <a class="link-box" href="/horror.html"><img src="/svg/horror.svg" class="navicon"><span class="navtext">Horror Games</span></a>
-    <br>
-    <a class="link-box" href="/survival.html"><img src="/svg/survival.svg" class="navicon"><span class="navtext">Survival Games</span></a>
-    <br>
-    <a class="link-box" href="/mouse.html"><img src="/svg/clicker.svg" class="navicon"><span class="navtext">Mouse-only Games</span></a>
-    <br>
+        <br>
+        <a class="link-box" href="/games.html?query=/horror.html"><img src="/svg/horror.svg" class="navicon"><span class="navtext">Horror Games</span></a>
+        <br>
+        <a class="link-box" href="/games.html?query=/survival.html"><img src="/svg/survival.svg" class="navicon"><span class="navtext">Survival Games</span></a>
+        <br>
+        <a class="link-box" href="/games.html?query=/mouse.html"><img src="/svg/clicker.svg" class="navicon"><span class="navtext">Mouse-only Games</span></a>
+        <br>
 
-</span>
-
+    </span>
 
   </div>
   <a id="settings" href="/settings.html"><img src="/svg/settings.svg" class="navicon"></a>
@@ -116,7 +115,7 @@
     </tr>
     <tr>
         <td><h1>Always Extend Side Navigation</h1>
-        <h2>Quite self expanatory. May require refresh for changes to take effect.</h2></td>
+        <h2>Quite self expanatory.</h2></td>
       <td><button class="settingButton" onclick="sideNavChange()">Toggle Extended Side Nav</button></td></tr>
     <tr>
       <td><h1>Color</h1>
