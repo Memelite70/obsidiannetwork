@@ -3,13 +3,7 @@
 <head>
 <link rel="manifest" href="manifest.json">
   <script>
-    var eeeeee = localStorage.getItem("eeeeee");
-    if(eeeeee){
 
-
-    }else{
-      window.location.href = "/cookieconfirm.html"
-    }
 
   </script>
   <script>
@@ -18,7 +12,15 @@
     window.location.href = window.location.href;
   }
   else if(path != "/404.html"){
+
   window.location.href="/404.html";}
+
+else{
+    var eeeeee = localStorage.getItem("eeeeee");
+    if(eeeeee){
+    }else{
+      window.location.href = "/cookieconfirm.html"
+    }}
   </script>
   <script src="/js/spinner.js"></script>
   <script src="/js/nav.js"></script>
